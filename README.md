@@ -113,7 +113,8 @@ The final result was:-
 
 The F1 score is the harmonic mean of the precision and recall. It thus symmetrically represents both precision and recall in one metric.
 F1 score = 2*Precision*Recall/(Precision+Recall)
-For the Grammar Error detection (GED) model the f1 score was around on the custom response dataset :- 0.8085106382978724 and on the validation dataset of the CoLa dataset it was found to be :- 0.85678 
+For the Grammar Error detection (GED) model the f1 score was around on the custom response dataset :- 0.8085106382978724 and on the validation dataset of the CoLa dataset it was found to be :- 0.85678.
+<br>
 The training graph looked like 
 ![](/Image/Graph_Bert.png)
 
