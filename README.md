@@ -90,7 +90,7 @@ Along with the feature of grammar correction, we have implemented the get highli
  • Create a set of sentences with each word “masked”, deleted or an additional determiner, preposition   or helper verb added 
  • Used Seq2Seq Language Model to determine possible suggestions for masks 
 
-
+![](Image/Seq2Seq.png)
 
                      
 # Feedback
