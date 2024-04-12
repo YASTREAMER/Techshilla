@@ -117,6 +117,15 @@ F1 score = 2*Precision*Recall/(Precision+Recall) <br>
 
 For the Grammar Error detection (GED) model the f1 score was around on the custom response dataset :- 0.8085106382978724 and on the validation dataset of the CoLa dataset it was found to be :- 0.85678.
 <br>
+''' 
+from sklearn.metrics import f1_score
+flat_predictions = [item for sublist in predictions for item in sublist]
+flat_predictions = np.argmax(flat_predictions, axis=1).flatten()
+flat_true_labels = [item for sublist in true_labels for item in sublist]
+
+f1_score(flat_true_labels , flat_predictions) '''
+
+
 The training graph looked like 
 ![](/Image/Graph_Bert.png)
 
