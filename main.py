@@ -57,7 +57,7 @@ def main() -> None:
     
     print(f"The accuracy of your answer was {accuracy_answer*100}")
 
-    feedback()
+    feedback(TranscribedAudio,Confident,pace)
 
 if __name__ =="__main__":
     main()
