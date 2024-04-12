@@ -90,3 +90,15 @@ Along with the feature of grammar correction, we have implemented the get highli
 
                      
 # Feedback
+
+Feedback is given using accuracy score and was done using the following code 
+
+      model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
+
+        #Compute embedding for both lists
+        embedding_1= model.encode(Sentense1, convert_to_tensor=True)
+        embedding_2 = model.encode(Sentense2, convert_to_tensor=True)
+
+        similar=util.pytorch_cos_sim(embedding_1, embedding_2)
+
+Belu score was also used to evaluate the model.

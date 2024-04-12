@@ -44,5 +44,4 @@ def Grammer(model) -> int:
 
   #Predicting whether the sentence has grammatical error
 
-  model.
   return
