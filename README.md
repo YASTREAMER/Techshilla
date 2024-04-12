@@ -34,7 +34,7 @@ When answering an interview question, one major factor to be considered was that
 
 # Grammatical error detection 
 
-Grammar Error Detection Model 
+**Grammar Error Detection Model** 
 
 PromOne of the main roadblocks in teaching computers to understand language (Natural Language Processing) is the lack of training data. This field covers many specific tasks, and most datasets for these tasks are quite small, containing only thousands or a few hundred thousand examples labelled by humans.
 
@@ -46,10 +46,8 @@ We have used the pre-trained BERT for our GED (Grammar Error Detection Model) an
 
 
 
-BERT bidirection structure
-
  ![](Image/LSTM.jpeg)
-
+Fig. BERT bidirection structure
 
 There are two steps in BERT framework: pre-training and fine-tuning. During pre-training, the model is trained on unlabeled data over different pre-training tasks. For finetuning, the BERT model is first initialized with the pre-trained parameters, and all the parameters are fine-tuned using labeled data from the downstream tasks.
 
@@ -74,7 +72,7 @@ There are two steps in BERT framework: pre-training and fine-tuning. During pre-
 
 
 
-Grammar Error Correction Model
+**Grammar Error Correction Model**
 
 A seq2seq model basically consists of an encoder-decoder architecture. Seq2seq models have been proven to be effective in many NLP tasks, such as machine translation, text summarization, dialogue systems , and so on. To correct the potential errors, GEC systems have to understand the meaning of the sentences. 
 
@@ -91,6 +89,7 @@ Along with the feature of grammar correction, we have implemented the get highli
  • Used Seq2Seq Language Model to determine possible suggestions for masks 
 
 ![](Image/Seq2Seq.png)
+Fig. Seq2Seq model architecture
 
                      
 # Feedback
