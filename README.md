@@ -26,6 +26,9 @@ The link for the custom dataset is [here](https://docs.google.com/spreadsheets/d
 
 This was one of the biggest task that had to be handled. The model not only had to convert speech to text but it also had to be efficient enough for it to not cause a bottle neck. Thus we decided to use OpenAI's whisper model. With this model we were able to convert speech to text.
 
+ ![](Image/Whisper)
+
+
 When answering an interview question, one major factor to be considered was that whether or not the speaker was speaking at an optimatl pace. Usually the optimal pace depends on the type of question asked and the person speaking but, generally it should lie between 120 to 150 beats per minute. [Librosa](https://github.com/librosa/librosa) was used to find the Beats per minute/ Tempo and the user was accordingly given a review.
 
 # Grammatical error detection 
