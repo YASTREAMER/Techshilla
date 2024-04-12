@@ -11,6 +11,7 @@ For the problem statement a number of models had to be used and were fine tuned 
 2) [Speech to text convertor.](#speech-to-text-generation)
 3) [Grammer error detection and correction.](#grammatical-error-detection)
 4) [Feedback.](#feedback)
+5) [Result](#result)
 
 These models were fit into a certain pipeline to be used effectively. A detailed section for each of these could be found below.
 
@@ -83,7 +84,7 @@ A seq2seq model basically consists of an encoder-decoder architecture. Seq2seq m
 Human and machine generated text often suffer from grammatical and/or typographical errors. It can be spelling, punctuation, grammatical or word choice errors. Gramformer is a library that exposes 3 seperate interfaces to a family of algorithms to detect, highlight and correct grammar errors. To make sure the corrections and highlights recommended are of high quality, it comes with a quality estimator. We have used Gramformer in our Grammar Correction Model and used the Seq2Seq model along with it to correct the sentences. Finally, we have used BLEU score as the evaluation metrics and calculated it for the customized responses dataset of ours. 
 Along with the feature of grammar correction, we have implemented the get highlight function which will  highlight the portion where grammatical errors are present.
 
- • Tokenize the sentences using Spacy open-source library
+ Tokenize the sentences using Spacy open-source library
  • Check for spelling errors 
  • For all preposition, determiners & helper verbs, create a set of probable sentences
  • Create a set of sentences with each word “masked”, deleted or an additional determiner, preposition   or helper verb added 
@@ -105,3 +106,15 @@ Feedback is given using accuracy score and was done using the following code
         similar=util.pytorch_cos_sim(embedding_1, embedding_2)
 
 Belu score was also used to evaluate the model.
+
+# Result
+
+The final result was:- 
+
+For the BERT model the accuracy was around :- 0.8085106382978724
+This was caculated using F1 Score. The training graph looked like 
+![](/Image/Graph_Bert.png)
+
+For the whisper model the accuracy was around:- 0.8210654684668.
+
+The final report 
