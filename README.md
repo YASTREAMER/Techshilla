@@ -47,7 +47,7 @@ We have used the pre-trained BERT for our GED (Grammar Error Detection Model) an
 
 
  ![](Image/LSTM.jpeg)
-Fig. BERT bidirection structure
+
 
 There are two steps in BERT framework: pre-training and fine-tuning. During pre-training, the model is trained on unlabeled data over different pre-training tasks. For finetuning, the BERT model is first initialized with the pre-trained parameters, and all the parameters are fine-tuned using labeled data from the downstream tasks.
 
@@ -89,10 +89,7 @@ Along with the feature of grammar correction, we have implemented the get highli
  • Used Seq2Seq Language Model to determine possible suggestions for masks 
 
 
-<figure>
-  <img src="Seq2Seq.png" alt="Trulli" style="width:50%">
-  <figcaption>Fig.Seq2Seq Model Architecture.</figcaption>
-</figure>
+![](Image/Seq2Seq.png)
 
                      
 # Feedback
@@ -112,11 +109,21 @@ Belu score was also used to evaluate the model.
 # Result
 
 The final result was:- 
+**F1 Score**
 
-For the BERT model the accuracy was around :- 0.8085106382978724
-This was caculated using F1 Score. The training graph looked like 
+The F1 score is the harmonic mean of the precision and recall. It thus symmetrically represents both precision and recall in one metric.
+{\displaystyle F_{1}={\frac {2}{\mathrm {recall} ^{-1}+\mathrm {precision} ^{-1}}}=2{\frac {\mathrm {precision} \cdot \mathrm {recall} }{\mathrm {precision} +\mathrm {recall} }}={\frac {2\mathrm {tp} }{2\mathrm {tp} +\mathrm {fp} +\mathrm {fn} }}}.
+For the Grammar Error detection (GED) model the f1 score was around on the custom response dataset :- 0.8085106382978724 and on the validation dataset of the CoLa dataset it was found to be :- 0.85678 
+The training graph looked like 
 ![](/Image/Graph_Bert.png)
 
+**Accuracy**
 For the whisper model the accuracy was around:- 0.8210654684668.
+
+**BLEU Score**
+
+BLEU (bilingual evaluation understudy) is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another.
+BLEU's output is always a number between 0 and 1. This value indicates how similar the candidate text is to the reference texts, with values closer to 1 representing more similar texts.
+BLEU scores have been calculated on both the interview question generation model and the grammar error correction model.
 
 The final report 
