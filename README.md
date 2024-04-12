@@ -111,8 +111,10 @@ Belu score was also used to evaluate the model.
 The final result was:- 
 **F1 Score**
 
-The F1 score is the harmonic mean of the precision and recall. It thus symmetrically represents both precision and recall in one metric.
-F1 score = 2*Precision*Recall/(Precision+Recall)
+The F1 score is the harmonic mean of the precision and recall. It thus symmetrically represents both precision and recall in one metric. <br>  
+
+F1 score = 2*Precision*Recall/(Precision+Recall) <br>  
+
 For the Grammar Error detection (GED) model the f1 score was around on the custom response dataset :- 0.8085106382978724 and on the validation dataset of the CoLa dataset it was found to be :- 0.85678.
 <br>
 The training graph looked like 
@@ -123,18 +125,20 @@ For the whisper model the accuracy was around:- 0.8210654684668.
 
 **BLEU Score**
 
-BLEU (bilingual evaluation understudy) is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another.
-BLEU's output is always a number between 0 and 1. This value indicates how similar the candidate text is to the reference texts, with values closer to 1 representing more similar texts.
+BLEU (bilingual evaluation understudy) is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another. <br>
+
+BLEU's output is always a number between 0 and 1. This value indicates how similar the candidate text is to the reference texts, with values closer to 1 representing more similar texts. <br>  
+
 BLEU scores have been calculated on both the interview question generation model and the grammar error correction model.
 
 **System Usability Scale**
 
-SUS score has been computed for the built system. The System Usability Scale is one of the most efficient ways of gathering statistically valid data and giving your website a clear and reasonably precise score.
+SUS score has been computed for the built system. The System Usability Scale is one of the most efficient ways of gathering statistically valid data and giving your website a clear and reasonably precise score. <br>  
 
-The average SUS score is 112.25 on 10 responses.
+The average SUS score is 112.25 on 10 responses. <br>  
 
-Questionnair form link: https://docs.google.com/forms/d/e/1FAIpQLSfV_HlQoKzcB9UBJ8bQFq-rzOx1lpr5rLVVguykHLk0onnk2w/viewform
+Questionnair form link: https://docs.google.com/forms/d/e/1FAIpQLSfV_HlQoKzcB9UBJ8bQFq-rzOx1lpr5rLVVguykHLk0onnk2w/viewform  <br>
 
-Responses Spreadsheet link: https://docs.google.com/spreadsheets/d/1MC1SWutRmduxM8BcGwSdaXO1xHi_u2NgnYnNt3ZseQc/edit?resourcekey#gid=1074690825
+Responses Spreadsheet link: https://docs.google.com/spreadsheets/d/1MC1SWutRmduxM8BcGwSdaXO1xHi_u2NgnYnNt3ZseQc/edit?resourcekey#gid=1074690825  <br>
 
 The final report has been uploaded also which contains all the relevant information and explanation of the platform and models along with results and references.
