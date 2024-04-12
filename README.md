@@ -117,13 +117,14 @@ F1 score = 2*Precision*Recall/(Precision+Recall) <br>
 
 For the Grammar Error detection (GED) model the f1 score was around on the custom response dataset :- 0.8085106382978724 and on the validation dataset of the CoLa dataset it was found to be :- 0.85678.
 <br>
-''' 
+```
 from sklearn.metrics import f1_score
 flat_predictions = [item for sublist in predictions for item in sublist]
 flat_predictions = np.argmax(flat_predictions, axis=1).flatten()
 flat_true_labels = [item for sublist in true_labels for item in sublist]
 
-f1_score(flat_true_labels , flat_predictions) '''
+f1_score(flat_true_labels , flat_predictions)
+```
 
 
 The training graph looked like 
@@ -139,6 +140,28 @@ BLEU (bilingual evaluation understudy) is an algorithm for evaluating the qualit
 BLEU's output is always a number between 0 and 1. This value indicates how similar the candidate text is to the reference texts, with values closer to 1 representing more similar texts. <br>  
 
 BLEU scores have been calculated on both the interview question generation model and the grammar error correction model.
+
+```
+import nltk
+from nltk.translate.bleu_score import sentence_bleu
+from pytorch_pretrained_bert import BertTokenizer
+
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case = True)
+tokenized_texts = [tokenizer.tokenize(sent) for sent in sentences]
+tokenized_right_texts = [tokenizer.tokenize(sent) for sent in right_sentences]
+tokenized_correct_texts =  [tokenizer.tokenize(sent) for sent in correct_sentences]
+BLEU_Score = []
+
+for i in range(len(sentences)):
+  reference.append(tokenized_right_texts[i])
+  candidate = tokenized_correct_texts[i]
+  score = sentence_bleu(reference, candidate)
+  BLEU_Score.append(score)
+  refernece = []
+
+BLEU_Score
+```
+The average BLEU score on the response dataset is 0.9617.
 
 **System Usability Scale**
 
