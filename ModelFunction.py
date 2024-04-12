@@ -1,10 +1,16 @@
 from transformers.utils.import_utils import is_nltk_available
 from sentence_transformers import SentenceTransformer, util
+import tensorflow as tf
 
-def generate(model,maxlength) -> str:
+device_name = tf.test.gpu_device_name()
+if device_name != '/device:GPU:0':
+  raise SystemError ('GPU device not found')
 
-  print("Hello")
-  inputText= input()
+
+
+def generate(model,maxlength,inputText) -> str:
+
+  
   GeneratedText=model(inputText,max_length=16192, do_sample=False)
 
   return(GeneratedText)
@@ -29,3 +35,14 @@ def feedback(response,Confident,pace) -> None:
 
   if Confident:
     print(f"You were quite confident the your average pace was around:- {pace}")
+
+  else:
+    print(f"Your pace was quite off it was around:- {pace}. Your average pace should be around 128 and the range should be around 120 to 150")
+
+
+def Grammer(model) -> int:
+
+  #Predicting whether the sentence has grammatical error
+
+  model.
+  return
