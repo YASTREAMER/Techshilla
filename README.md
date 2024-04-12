@@ -112,7 +112,7 @@ The final result was:-
 **F1 Score**
 
 The F1 score is the harmonic mean of the precision and recall. It thus symmetrically represents both precision and recall in one metric.
-{\displaystyle F_{1}={\frac {2}{\mathrm {recall} ^{-1}+\mathrm {precision} ^{-1}}}=2{\frac {\mathrm {precision} \cdot \mathrm {recall} }{\mathrm {precision} +\mathrm {recall} }}={\frac {2\mathrm {tp} }{2\mathrm {tp} +\mathrm {fp} +\mathrm {fn} }}}.
+F1 score = 2*Precision*Recall/(Precision+Recall)
 For the Grammar Error detection (GED) model the f1 score was around on the custom response dataset :- 0.8085106382978724 and on the validation dataset of the CoLa dataset it was found to be :- 0.85678 
 The training graph looked like 
 ![](/Image/Graph_Bert.png)
@@ -126,4 +126,14 @@ BLEU (bilingual evaluation understudy) is an algorithm for evaluating the qualit
 BLEU's output is always a number between 0 and 1. This value indicates how similar the candidate text is to the reference texts, with values closer to 1 representing more similar texts.
 BLEU scores have been calculated on both the interview question generation model and the grammar error correction model.
 
-The final report 
+**System Usability Scale**
+
+SUS score has been computed for the built system. The System Usability Scale is one of the most efficient ways of gathering statistically valid data and giving your website a clear and reasonably precise score.
+
+The average SUS score is 112.25 on 10 responses.
+
+Questionnair form link: https://docs.google.com/forms/d/e/1FAIpQLSfV_HlQoKzcB9UBJ8bQFq-rzOx1lpr5rLVVguykHLk0onnk2w/viewform
+
+Responses Spreadsheet link: https://docs.google.com/spreadsheets/d/1MC1SWutRmduxM8BcGwSdaXO1xHi_u2NgnYnNt3ZseQc/edit?resourcekey#gid=1074690825
+
+The final report has been uploaded also which contains all the relevant information and explanation of the platform and models along with results and references.
