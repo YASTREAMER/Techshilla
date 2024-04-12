@@ -89,7 +89,10 @@ Along with the feature of grammar correction, we have implemented the get highli
  • Used Seq2Seq Language Model to determine possible suggestions for masks 
 
 ![](Image/Seq2Seq.png)
-Fig. Seq2Seq model architecture
+<figure>
+  <img src="Seq2Seq.png" alt="Trulli" style="width:100%">
+  <figcaption>Fig.Seq2Seq Model Architecture.</figcaption>
+</figure>
 
                      
 # Feedback
