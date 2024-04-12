@@ -2,7 +2,7 @@
 freq: int = 44400
 
 # Recording duration in seconds
-duration: float = 3.5
+duration: float = 10
 
 #acessess token
 

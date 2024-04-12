@@ -3,6 +3,7 @@ import sounddevice as sd
 from scipy.io.wavfile import write
 import wavio as wv
 import librosa
+import whisper
 
 from const import *
 
@@ -23,9 +24,18 @@ def tempo() -> float:
     y, sr = audio_file
 
     #Tempo Detection 
-    tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
+    tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)    
 
     return tempo
+
+def SpeechToText() -> str:
+
+    model = whisper.load_model("base")
+
+    result = model.transcribe("Input/input.wav")
+    
+    return result
+
 
 def pace(bpm) -> bool:
 
