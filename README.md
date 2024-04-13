@@ -117,4 +117,5 @@ This was caculated using F1 Score. The training graph looked like
 
 For the whisper model the accuracy was around:- 0.8210654684668.
 
-The final report 
+The final report can be found here: - 
+[Presentation](Presentation/presentation.pdf)
