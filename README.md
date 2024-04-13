@@ -34,7 +34,7 @@ When answering an interview question, one major factor to be considered was that
 
 # Grammatical error detection 
 
-Grammar Error Detection Model 
+**Grammar Error Detection Model** 
 
 PromOne of the main roadblocks in teaching computers to understand language (Natural Language Processing) is the lack of training data. This field covers many specific tasks, and most datasets for these tasks are quite small, containing only thousands or a few hundred thousand examples labelled by humans.
 
@@ -45,8 +45,6 @@ In February 2018, Google introduced a new and open-source technique for NLP pre-
 We have used the pre-trained BERT for our GED (Grammar Error Detection Model) and fine-tuned it for our specific to our task.
 
 
-
-BERT bidirection structure
 
  ![](Image/LSTM.jpeg)
 
@@ -74,7 +72,7 @@ There are two steps in BERT framework: pre-training and fine-tuning. During pre-
 
 
 
-Grammar Error Correction Model
+**Grammar Error Correction Model**
 
 A seq2seq model basically consists of an encoder-decoder architecture. Seq2seq models have been proven to be effective in many NLP tasks, such as machine translation, text summarization, dialogue systems , and so on. To correct the potential errors, GEC systems have to understand the meaning of the sentences. 
 
@@ -91,6 +89,7 @@ Along with the feature of grammar correction, we have implemented the get highli
  • Used Seq2Seq Language Model to determine possible suggestions for masks 
 
 
+![](Image/Seq2Seq.png)
 
                      
 # Feedback
@@ -110,12 +109,73 @@ Belu score was also used to evaluate the model.
 # Result
 
 The final result was:- 
+**F1 Score**
 
-For the BERT model the accuracy was around :- 0.8085106382978724
-This was caculated using F1 Score. The training graph looked like 
+The F1 score is the harmonic mean of the precision and recall. It thus symmetrically represents both precision and recall in one metric. <br>  
+
+F1 score = 2*Precision*Recall/(Precision+Recall) <br>  
+
+For the Grammar Error detection (GED) model the f1 score was around on the custom response dataset :- 0.8085106382978724 and on the validation dataset of the CoLa dataset it was found to be :- 0.85678.
+<br>
+```
+from sklearn.metrics import f1_score
+flat_predictions = [item for sublist in predictions for item in sublist]
+flat_predictions = np.argmax(flat_predictions, axis=1).flatten()
+flat_true_labels = [item for sublist in true_labels for item in sublist]
+
+f1_score(flat_true_labels , flat_predictions)
+```
+
+
+The training graph looked like 
 ![](/Image/Graph_Bert.png)
 
+**Accuracy**
 For the whisper model the accuracy was around:- 0.8210654684668.
 
+<<<<<<< HEAD
 The final report can be found here: - 
 [Presentation](Presentation/presentation.pdf)
+=======
+**BLEU Score**
+
+BLEU (bilingual evaluation understudy) is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another. <br>
+
+BLEU's output is always a number between 0 and 1. This value indicates how similar the candidate text is to the reference texts, with values closer to 1 representing more similar texts. <br>  
+
+BLEU scores have been calculated on both the interview question generation model and the grammar error correction model.
+
+```
+import nltk
+from nltk.translate.bleu_score import sentence_bleu
+from pytorch_pretrained_bert import BertTokenizer
+
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased', do_lower_case = True)
+tokenized_texts = [tokenizer.tokenize(sent) for sent in sentences]
+tokenized_right_texts = [tokenizer.tokenize(sent) for sent in right_sentences]
+tokenized_correct_texts =  [tokenizer.tokenize(sent) for sent in correct_sentences]
+BLEU_Score = []
+
+for i in range(len(sentences)):
+  reference.append(tokenized_right_texts[i])
+  candidate = tokenized_correct_texts[i]
+  score = sentence_bleu(reference, candidate)
+  BLEU_Score.append(score)
+  refernece = []
+
+BLEU_Score
+```
+The average BLEU score on the response dataset is 0.9617.
+
+**System Usability Scale**
+
+SUS score has been computed for the built system. The System Usability Scale is one of the most efficient ways of gathering statistically valid data and giving your website a clear and reasonably precise score. <br>  
+
+The average SUS score is 112.25 on 10 responses. <br>  
+
+Questionnair form link: https://docs.google.com/forms/d/e/1FAIpQLSfV_HlQoKzcB9UBJ8bQFq-rzOx1lpr5rLVVguykHLk0onnk2w/viewform  <br>
+
+Responses Spreadsheet link: https://docs.google.com/spreadsheets/d/1MC1SWutRmduxM8BcGwSdaXO1xHi_u2NgnYnNt3ZseQc/edit?resourcekey#gid=1074690825  <br>
+
+The final report has been uploaded also which contains all the relevant information and explanation of the platform and models along with results and references. The final report can be found [here](Presentation/presentation.pdf)
+>>>>>>> dfde475148120474f2a93005c2bc59adf506a0c3
