@@ -9,7 +9,7 @@ For the problem statement, several models had to be used and were fine-tuned acc
 
 1) [Question generation.](#question-generation)
 2) [Speech to text convertor.](#speech-to-text-generation)
-3) [Grammer error detection.](#grammatical-error-detection)
+3) [Grammer error detection and correction.](#grammatical-error-detection-and-correction)
 4) [Feedback.](#feedback)
 5) [Result](#result)
 7) [Presentation](#presentation)
@@ -181,6 +181,6 @@ The final report has also been uploaded, containing all the relevant information
 Model Explanation Video has been uploaded on the drive link: https://drive.google.com/file/d/1iO5zllxw5Guqm4R0A7cf25XDDvOgWcwP/view?usp=sharing
 
 # Presentation 
-<br>
+
 The final ppt can be found here: - 
 [Presentation](Techshila_PPT.pptx)
