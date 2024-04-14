@@ -133,9 +133,8 @@ The training graph looked like
 **Accuracy**
 For the whisper model, the accuracy was around:- 0.8210654684668.
 
-
-The final report can be found here: - 
-[Report](Presentation/Techshila_Project_Report.pdf)
+The final ppt can be found here: - 
+[Presentation](Presentation/Techshila_PPT.pptx)
 =======
 **BLEU Score**
 
@@ -179,5 +178,5 @@ Responses Spreadsheet link: https://docs.google.com/spreadsheets/d/1MC1SWutRmdux
 
 The final report has also been uploaded, containing all the relevant information and an explanation of the platform and models, along with results and references. The final report can be found [here](Project_Report_TechShila.pdf)
 
-#Model Working Video
+**Model Working Video**
 Model Explanation Video has been uploaded on the drive link: https://drive.google.com/file/d/1iO5zllxw5Guqm4R0A7cf25XDDvOgWcwP/view?usp=sharing
