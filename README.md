@@ -9,10 +9,10 @@ For the problem statement, several models had to be used and were fine-tuned acc
 
 1) [Question generation.](#question-generation)
 2) [Speech to text convertor.](#speech-to-text-generation)
-3) [Grammer error detection and correction.](#grammatical-error-detection)
+3) [Grammer error detection.](#grammatical-error-detection)
 4) [Feedback.](#feedback)
 5) [Result](#result)
-6) [Presentation](#presentation)
+7) [Presentation](#presentation)
 
 These models fit into a certain pipeline to be used effectively. A detailed section for each of these can be found below.
 
@@ -35,7 +35,7 @@ When answering an interview question, one major factor to be considered was whet
 
 # Grammatical error detection and correction
 
-**Grammar Error Detection Model** 
+## Grammar Error Detection Model
 
 One of the main roadblocks in teaching computers to understand language (Natural Language Processing) is the lack of training data. This field covers many specific tasks, and most datasets for these tasks are quite small, containing only thousands or a few hundred thousand examples labeled by humans.
 
@@ -73,7 +73,7 @@ There are two steps in the BERT framework: pre-training and fine-tuning. During 
 
 
 
-**Grammar Error Correction Model**
+## Grammar Error Correction Model
 
 A seq2seq model consists of an encoder-decoder architecture. Seq2seq models have been proven to be effective in many NLP tasks, such as machine translation, text summarization, dialogue systems, and so on. To correct the potential errors, GEC systems have to understand the meaning of the sentences. 
 
@@ -110,7 +110,7 @@ Belu score was also used to evaluate the model.
 # Result
 
 The final result was:- 
-**F1 Score**
+## F1 Score
 
 The F1 score is the harmonic mean of the precision and recall. It thus symmetrically represents both precision and recall in one metric. <br>  
 
@@ -135,7 +135,7 @@ The training graph looked like
 For the whisper model, the accuracy was around:- 0.8210654684668.
 
 
-**BLEU Score**
+## BLEU Score
 
 BLEU (bilingual evaluation understudy) is an algorithm for evaluating the quality of text that has been machine-translated from one natural language to another. <br>
 
@@ -180,7 +180,7 @@ The final report has also been uploaded, containing all the relevant information
 **Model Working Video**
 Model Explanation Video has been uploaded on the drive link: https://drive.google.com/file/d/1iO5zllxw5Guqm4R0A7cf25XDDvOgWcwP/view?usp=sharing
 
-#Presentation 
+# Presentation 
 <br>
 The final ppt can be found here: - 
 [Presentation](Techshila_PPT.pptx)
