@@ -12,7 +12,7 @@ For the problem statement, several models had to be used and were fine-tuned acc
 3) [Grammer error detection and correction.](#grammatical-error-detection)
 4) [Feedback.](#feedback)
 5) [Result](#result)
-6) [Presentation](#Presentation)
+6) [Presentation](#presentation)
 
 These models fit into a certain pipeline to be used effectively. A detailed section for each of these can be found below.
 
@@ -33,7 +33,7 @@ This was one of the biggest tasks that had to be handled. The model not only had
 
 When answering an interview question, one major factor to be considered was whether or not the speaker was speaking at an optimal pace. Usually, the optimal pace depends on the type of question asked and the person speaking but, generally, it should lie between 120 to 150 beats per minute. [Librosa](https://github.com/librosa/librosa) was used to find the Beats per minute/ Tempo and the user was accordingly given a review.
 
-# Grammatical error detection 
+# Grammatical error detection and correction
 
 **Grammar Error Detection Model** 
 
@@ -180,7 +180,8 @@ The final report has also been uploaded, containing all the relevant information
 **Model Working Video**
 Model Explanation Video has been uploaded on the drive link: https://drive.google.com/file/d/1iO5zllxw5Guqm4R0A7cf25XDDvOgWcwP/view?usp=sharing
 
-#Presentation
+#Presentation 
+<br>
 The final ppt can be found here: - 
 [Presentation](Techshila_PPT.pptx)
 =======
