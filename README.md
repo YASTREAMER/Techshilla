@@ -133,9 +133,7 @@ The training graph looked like
 **Accuracy**
 For the whisper model, the accuracy was around:- 0.8210654684668.
 
-The final ppt can be found here: - 
-[Presentation](Techshila_PPT.pptx)
-=======
+
 **BLEU Score**
 
 BLEU (bilingual evaluation understudy) is an algorithm for evaluating the quality of text that has been machine-translated from one natural language to another. <br>
@@ -180,3 +178,8 @@ The final report has also been uploaded, containing all the relevant information
 
 **Model Working Video**
 Model Explanation Video has been uploaded on the drive link: https://drive.google.com/file/d/1iO5zllxw5Guqm4R0A7cf25XDDvOgWcwP/view?usp=sharing
+
+
+The final ppt can be found here: - 
+[Presentation](Techshila_PPT.pptx)
+=======
