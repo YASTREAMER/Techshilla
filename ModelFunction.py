@@ -3,8 +3,8 @@ from sentence_transformers import SentenceTransformer, util
 import tensorflow as tf
 
 device_name = tf.test.gpu_device_name()
-if device_name != '/device:GPU:0':
-  raise SystemError ('GPU device not found')
+# if device_name != '/device:GPU:0':
+#   raise SystemError ('GPU device not found')
 
 
 
@@ -28,9 +28,9 @@ def Sentence(Sentense1, Sentense2) -> float:
   return similar
 
 
-def feedback(response,Confident,pace) -> None:
+def feedback(response,responsean,Confident,pace) -> None:
 
-
+  print(f"Your answer was {response}, while it should have been {responsean}")
   print(f"{response}.")
 
   if Confident:

@@ -25,8 +25,10 @@ def main() -> None:
     #Generate a question for the user
     response = generate(generator,TokenLength, InputText)
 
+    print(response)
+
     #Generate the answer to the question of the user
-    responseAnswer = generate(generator, TokenLength, response["generated_text"])
+    responseAnswer = generate(generator, TokenLength, response)
 
 
     # Seeing whether or not the user is ready for the input or not
@@ -57,7 +59,7 @@ def main() -> None:
     
     print(f"The accuracy of your answer was {accuracy_answer*100}")
 
-    feedback(TranscribedAudio,Confident,pace)
+    feedback(TranscribedAudio,responseAnswer,Confident,pace)
 
 if __name__ =="__main__":
     main()
