@@ -134,7 +134,7 @@ The training graph looked like
 For the whisper model, the accuracy was around:- 0.8210654684668.
 
 The final ppt can be found here: - 
-[Presentation](Presentation/Techshila_PPT.pptx)
+[Presentation](Techshilla/Techshila_PPT.pptx)
 =======
 **BLEU Score**
 
